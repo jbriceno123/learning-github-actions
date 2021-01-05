@@ -12,4 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
-    - run: sh yarn test
+    - name: Install modules
+    - run: yarn install
+    - name: Run Tests
+    - run: yarn test
