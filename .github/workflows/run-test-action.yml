@@ -11,3 +11,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install modules
       uses: actions/setup-node@v1
+      run: yarn install
