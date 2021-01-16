@@ -7,7 +7,6 @@
  * @copyright       Compara
  **/
 
- //algun Comentario..!!
 export default class Assert {
   public static conditionError(
     cond: boolean,
