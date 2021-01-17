@@ -1,5 +1,17 @@
 import Assert from '../utility-assert';
 
+class CustomError implements Error {
+  name: string;
+  message: string;
+
+  constructor(message: string) {
+    Error.call(this);
+    Error.captureStackTrace(this, this.constructor);
+    this.name = 'Assert Condition Error';
+    this.message = `Custom Error - ${message}`;
+  }
+}
+
 describe('Assert', () => {
   describe('conditionError', () => {
     it('triggers the error message', () => {
@@ -40,15 +52,3 @@ describe('Assert', () => {
     });
   });
 });
-
-class CustomError implements Error {
-  name: string;
-  message: string;
-
-  constructor(message: string) {
-    Error.call(this);
-    Error.captureStackTrace(this, this.constructor);
-    this.name = 'Assert Condition Error';
-    this.message = `Custom Error - ${message}`;
-  }
-}
