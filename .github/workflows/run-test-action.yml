@@ -17,6 +17,7 @@ jobs:
       run: yarn test
 
   upload-files:
+    needs: run-tests
     name: Upload Changes
     runs-on: ubuntu-latest
     steps:
