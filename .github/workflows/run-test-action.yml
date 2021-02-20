@@ -21,14 +21,14 @@ jobs:
     name: Upload Changes
     runs-on: ubuntu-latest
     steps:
-      - id: file_changes
-        uses: trilom/file-changes-action@v1.2.3
+      - uses: trilom/file-changes-action@v1.2.3
+      - uses: actions/hello-world-javascript-action@v1.1
       - name: Get Changes
+        id: file_changes
         run: |
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Hello world action step
-      - id: hello
-        uses: actions/hello-world-javascript-action@v1.1
+        id: hello
         with:
           who-to-greet: 'Mona the Octocat'
