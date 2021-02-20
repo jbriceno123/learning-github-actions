@@ -28,7 +28,7 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Hello world action step
-      id: hello
-      uses: actions/hello-world-javascript-action@v1.1
-      with:
-        who-to-greet: 'Mona the Octocat'
+      - id: hello
+        uses: actions/hello-world-javascript-action@v1.1
+        with:
+          who-to-greet: 'Mona the Octocat'
