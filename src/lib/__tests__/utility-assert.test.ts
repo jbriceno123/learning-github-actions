@@ -42,13 +42,13 @@ describe('Assert', () => {
       expect(() => Assert.conditionError(mockResultCondicion)).not.toThrowError()
     });
   });
-  describe.each([
-    ['returns true if the key is inside the object', 'a', true],
-    ['returns false if the key is not inside the object', 'd', false],
-  ])('keyExists', (caseName, keyName, result) => {
-    const customObject = { a: 1, b: 2, c: 3 };
-    it(caseName, () => {
-      expect(Assert.keyExists(customObject, keyName)).toEqual(result)
-    });
-  });
+  // describe.each([
+  //   ['returns true if the key is inside the object', 'a', true],
+  //   ['returns false if the key is not inside the object', 'd', false],
+  // ])('keyExists', (caseName, keyName, result) => {
+  //   const customObject = { a: 1, b: 2, c: 3 };
+  //   it(caseName, () => {
+  //     expect(Assert.keyExists(customObject, keyName)).toEqual(result)
+  //   });
+  // });
 });
