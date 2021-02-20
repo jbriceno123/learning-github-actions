@@ -21,8 +21,6 @@ jobs:
     name: Upload Changes
     runs-on: ubuntu-latest
     steps:
-      - id: file_changes
-        uses: trilom/file-changes-action@v1.2.3
       - name: Get Changes
         run: |
           echo '${{ steps.file_changes.outputs.files_modified}}'
