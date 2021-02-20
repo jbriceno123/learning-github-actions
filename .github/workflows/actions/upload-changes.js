@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const fileChanges = require('trilom/file-changes-action@v1.2.3');
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -9,7 +10,8 @@ try {
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
   // const payload = JSON.stringify(github.context, undefined, 2)
-  console.log(`The event payload: \n${github.context}`);
+  console.log(`fileChanges: \n${fileChanges}`);
+  console.log(`github: \n${github}`);
 } catch (error) {
   core.setFailed(error.message);
 }
