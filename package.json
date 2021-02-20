@@ -9,9 +9,9 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf build/*",
-    "test": "jest",
+    "test": "eslint . --ext .ts --quiet && jest",
     "test:fast": "jest",
-    "lint": "eslint . --ext .ts,.tsx --quiet --fix"
+    "lint:fix": "eslint . --ext .ts,.tsx --quiet --fix"
   },
   "devDependencies": {
     "@hitc/netsuite-types": "^2019.2.9",
