@@ -18,37 +18,38 @@ describe('Assert', () => {
       const mockResultCondicion = false;
       const messageError = 'jump error';
 
-      expect(() => Assert.conditionError(mockResultCondicion, messageError)).toThrow(messageError)
+      expect(() => Assert.conditionError(mockResultCondicion, messageError)).toThrow(messageError);
     });
 
     it('return custom error', () => {
       const mockResultCondicion = false;
       const messageError = 'jump error';
 
-      expect(() => Assert.conditionError(mockResultCondicion, messageError, <ErrorConstructor>CustomError))
-        .toThrow(`Custom Error - ${messageError}`)
+      expect(() =>
+        Assert.conditionError(mockResultCondicion, messageError, CustomError as ErrorConstructor)
+      ).toThrow(`Custom Error - ${messageError}`);
     });
 
     it('returns the default message', () => {
       const mockResultCondicion = false;
       const messageError = 'assertion failed';
 
-      expect(() => Assert.conditionError(mockResultCondicion)).toThrow(messageError)
+      expect(() => Assert.conditionError(mockResultCondicion)).toThrow(messageError);
     });
 
     it('does not take action', () => {
       const mockResultCondicion = true;
 
-      expect(() => Assert.conditionError(mockResultCondicion)).not.toThrowError()
+      expect(() => Assert.conditionError(mockResultCondicion)).not.toThrowError();
     });
   });
   describe.each([
     ['returns true if the key is inside the object', 'a', true],
-    ['returns false if the key is not inside the object', 'd', false],
+    ['returns false if the key is not inside the object', 'd', false]
   ])('keyExists', (caseName, keyName, result) => {
     const customObject = { a: 1, b: 2, c: 3 };
     it(caseName, () => {
-      expect(Assert.keyExists(customObject, keyName)).toEqual(result)
+      expect(Assert.keyExists(customObject, keyName)).toEqual(result);
     });
   });
 });
