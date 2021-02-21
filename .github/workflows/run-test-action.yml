@@ -30,6 +30,6 @@ jobs:
       #     echo '${{ steps.file_changes.outputs.files_modified}}'
       #     echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Custom Action
-        uses: ./
+        uses: actions/action
         with:
           who-to-greet: 'Javier'
