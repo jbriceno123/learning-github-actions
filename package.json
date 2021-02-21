@@ -25,8 +25,5 @@
     "ts-jest": "^25.2.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
-  },
-  "dependencies": {
-    "yargs": "^16.2.0"
   }
 }

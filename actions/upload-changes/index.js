@@ -16,8 +16,5 @@
 //   core.setFailed(error.message);
 // }
 
-const yargs = require('yargs/yargs')
-const { hideBin } = require('yargs/helpers')
-const argv = yargs(hideBin(process.argv)).argv
-
+const argv = process.argv
 console.log('Parametros Recibidos: ', argv)
