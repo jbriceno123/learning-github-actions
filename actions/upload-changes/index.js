@@ -1,4 +1,4 @@
-const core = require('@actions/core');
+// const core = require('@actions/core');
 // const github = require('@actions/github');
 // const fileChanges = require('trilom/file-changes-action@v1.2.3');
 

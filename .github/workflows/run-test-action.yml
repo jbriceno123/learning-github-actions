@@ -32,6 +32,8 @@ jobs:
       - name: Compile Lib
         run: yarn compile
       - name: Custom Action
-        uses: ./actions/upload-changes/
-        with:
-          who-to-greet: 'Javier'
+        # uses: ./actions/upload-changes/
+        # with:
+        #   who-to-greet: 'Javier'
+        run: node ./actions/upload-changes/
+
