@@ -35,5 +35,5 @@ jobs:
         # uses: ./actions/upload-changes/
         # with:
         #   who-to-greet: 'Javier'
-        run: node ./actions/upload-changes --files='${{ JSON.stringify(steps.file_changes.outputs) }}'
+        run: node ./actions/upload-changes --files='${{ steps.file_changes.outputs.files_modified }}'
 
