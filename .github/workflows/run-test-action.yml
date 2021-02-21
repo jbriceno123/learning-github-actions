@@ -17,17 +17,17 @@ jobs:
       run: yarn test
 
   upload-files:
-    needs: run-tests
+    # needs: run-tests
     name: Upload Changes
     runs-on: ubuntu-latest
     steps:
-      - name: Get Changes
-        id: file_changes
-        uses: trilom/file-changes-action@v1.2.3
-      - name: Show Changes
-        run: |
-          echo '${{ steps.file_changes.outputs.files_modified}}'
-          echo '${{ steps.file_changes.outputs.files_added}}'
+      # - name: Get Changes
+      #   id: file_changes
+      #   uses: trilom/file-changes-action@v1.2.3
+      # - name: Show Changes
+      #   run: |
+      #     echo '${{ steps.file_changes.outputs.files_modified}}'
+      #     echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Custom Action
         uses: ./actions/upload-changes/action
         with:
