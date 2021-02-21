@@ -21,9 +21,14 @@ jobs:
     name: Upload Changes
     runs-on: ubuntu-latest
     steps:
-      - uses: trilom/file-changes-action@v1.2.3
       - name: Get Changes
         id: file_changes
+        uses: trilom/file-changes-action@v1.2.3
+      - name: Show Changes
         run: |
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
+      - name: Custom Action
+        uses: ./.github/actions/upload-changes/upload-changes
+        with:
+          who-to-greet: 'Javier'
