@@ -27,7 +27,3 @@ jobs:
         run: |
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
-      - name: Hello world action step
-        uses: ./.github/actions/upload-changes/upload-changes
-        with:
-          who-to-greet: 'Javier'
