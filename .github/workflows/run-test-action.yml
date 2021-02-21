@@ -29,6 +29,8 @@ jobs:
       #   run: |
       #     echo '${{ steps.file_changes.outputs.files_modified}}'
       #     echo '${{ steps.file_changes.outputs.files_added}}'
+      - name: Compile Lib
+        run: yarn compile
       - name: Custom Action
         uses: ./actions/upload-changes/
         with:
