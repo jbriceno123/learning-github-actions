@@ -28,6 +28,6 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Hello world action step
-        uses: actions/upload-changes
+        uses: actions/upload-files
         with:
           who-to-greet: 'Javier'

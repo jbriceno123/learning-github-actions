@@ -1,0 +1,13 @@
+name: 'Hello World'
+description: 'Testear la ejecucion de una accion JS'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Quien es?'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'Es tiempo'
+runs:
+  using: 'node12'
+  main: 'index.js'
