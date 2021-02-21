@@ -22,18 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - name: Get Changes
-      #   id: file_changes
-      #   uses: trilom/file-changes-action@v1.2.3
+      - name: Get Changes
+        id: file_changes
+        uses: trilom/file-changes-action@v1.2.3
       # - name: Show Changes
       #   run: |
       #     echo '${{ steps.file_changes.outputs.files_modified}}'
       #     echo '${{ steps.file_changes.outputs.files_added}}'
-      - name: Compile Lib
-        run: yarn compile
+      # - name: Compile Lib
+      #   run: yarn compile
       - name: Custom Action
         # uses: ./actions/upload-changes/
         # with:
         #   who-to-greet: 'Javier'
-        run: node ./actions/upload-changes/
+        run: node ./actions/upload-changes --files='${{ steps.file_changes.outputs}}'
 
