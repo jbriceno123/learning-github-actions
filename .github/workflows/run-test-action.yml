@@ -21,6 +21,7 @@ jobs:
     name: Upload Changes
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       # - name: Get Changes
       #   id: file_changes
       #   uses: trilom/file-changes-action@v1.2.3
