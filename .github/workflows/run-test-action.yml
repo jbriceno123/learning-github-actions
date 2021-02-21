@@ -29,6 +29,6 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
       - name: Custom Action
-        uses: ./.github/actions/upload-changes/upload-changes
+        uses: ./actions/upload-changes/action
         with:
           who-to-greet: 'Javier'
