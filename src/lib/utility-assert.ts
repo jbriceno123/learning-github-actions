@@ -17,7 +17,6 @@ export default class Assert {
   }
 
   public static keyExists(jsonObject: object, objectKey: string): boolean {
-    console.log('Hola');
     return Boolean(jsonObject[objectKey]);
   }
 }
