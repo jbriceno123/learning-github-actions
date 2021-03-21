@@ -37,3 +37,5 @@ jobs:
         #   who-to-greet: 'Javier'
         run: node ./actions/upload-changes --files='${{ steps.file_changes.outputs.files_modified }}'
 
+# DEBO MUDAR EL ACTION A UN REPO A PARTE
+# PUEDO CLONAR Y EDITAR EL EJEMPLO QUE SALE EN LA PAGINA DE GITHUB

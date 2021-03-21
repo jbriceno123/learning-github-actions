@@ -12,9 +12,18 @@ pipeline {
         sh 'yarn install'
       }
     }
-    stage('Test') { 
-      steps {
-        sh 'yarn test'
+    stage("Check code") {
+      parallel {
+        stage("Test") {
+          steps {
+            sh 'yarn test'
+          }
+        }
+        stage("Linter") {
+          steps {
+            sh 'yarn tslint'
+          }
+        }
       }
     }
   }

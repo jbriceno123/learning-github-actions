@@ -17,5 +17,8 @@
       "N/*": ["node_modules/@hitc/netsuite-types/N/*"]
     }
   },
-  "exclude": ["node_modules","**/__tests__/*.test.ts",]
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*"
+  ]
 }
